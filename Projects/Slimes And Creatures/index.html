@@ -6,12 +6,9 @@
     <title>Unity WebGL Player | No Heroes Allowed</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="stylesheet" href="style.css">
-  </head>
+        <link rel="stylesheet" href="style.css">
+      </head>
   <body>
-    <div class="div-button">
-      back button
-    </div>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
@@ -60,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Build.loader.js";
+      var loaderUrl = buildUrl + "/Slimes And Creatures.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Build.data.br",
-        frameworkUrl: buildUrl + "/Build.framework.js.br",
-        codeUrl: buildUrl + "/Build.wasm.br",
+        dataUrl: buildUrl + "/Slimes And Creatures.data.br",
+        frameworkUrl: buildUrl + "/Slimes And Creatures.framework.js.br",
+        codeUrl: buildUrl + "/Slimes And Creatures.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "No Heroes Allowed",
