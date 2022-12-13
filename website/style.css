@@ -1,0 +1,149 @@
+:root {
+    --darkcolor:rgb(26, 28, 29);
+    --lightcolor: rgb(70, 70, 70);
+}
+/* For text */
+* {
+    font-family: OCR A Std, monospace;
+    font-size: 20px;
+    line-height: 3rem;
+    text-decoration: none;
+    color: white;
+}
+a {
+    margin-right: 20px;
+    transition: 1s;
+    transform: translateX(-30%);
+}
+a:hover:not(#no-hover) {
+    font-size: 120%;
+    color: var(--lightcolor);
+    cursor: pointer;
+}
+
+body {
+    background-color: var(--darkcolor);
+    margin: auto;
+    width: 80%;
+    padding: 40px;
+}
+.div-left {
+    margin-left: 40px;
+    width: 40%;
+}
+.div-right {
+    margin-right: 40px;
+    width: 40%;
+}
+
+.animate-type:not(.hidden), .animate-type.show {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: 0.15em; /* Adjust as needed */
+    width: 0;
+    animation: 
+        typing 2s steps(30, end) forwards,
+        blink-caret .75s step-end;
+
+}
+/* The typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100% }
+}
+
+.grid-container {
+    width: 100%;
+    height: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+
+    /* Animation */
+    transform: translate(-70%);
+    filter: blur(10px);
+    transition: 1.5s;
+}
+@media (width <= 1300px) {
+    body {
+        width: 100%;
+    }
+    .div-left {
+        width: 80%;
+    }
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        height: 1200px;
+    }
+    .grid-item {
+        margin-top: 150px;
+    }
+    .about-me {
+        margin-top: 400px;
+    }
+}
+@media (width <= 650px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        height: 1800px;
+    }
+    .about-me {
+        margin-top: 500px;
+    }
+}
+
+.grid-item {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transition: 0.5s;
+}
+.grid-item img {
+    border-radius: 50%;
+}
+.grid-item:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.grid-item-details {
+    position: relative;
+    z-index: 0;
+    line-height: 1.5rem;
+}
+.grid-item-details-cover {
+    
+    position: absolute;
+    margin-top: 350px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkcolor);
+    transition: 1s;
+}
+
+.grid-item:hover .grid-item-details-cover {
+    transform: translateY(100%);
+}
+.grid-image {
+    height: 100%;
+    width: 100%;
+}
+.grid-item p {
+    text-align: center;
+    font-size: 30px;
+}
+.show { 
+    /* Animation */
+    transform: translate(0);
+    filter: blur(0px);
+    opacity: 1;
+}
+footer {
+    text-align: center;
+    font-style: italic;
+    height: 600px; /* This is so you can scroll lower */
+}
+
+
