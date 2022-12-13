@@ -10,16 +10,7 @@
     text-decoration: none;
     color: white;
 }
-a {
-    margin-right: 20px;
-    transition: 1s;
-    transform: translateX(-30%);
-}
-a:hover:not(#no-hover) {
-    font-size: 120%;
-    color: var(--lightcolor);
-    cursor: pointer;
-}
+
 
 body {
     background-color: var(--darkcolor);
@@ -97,7 +88,7 @@ body {
 .grid-item {
     position: relative;
     width: 350px;
-    height: 200px;
+    height: 800px;
     transition: 0.5s;
 }
 .grid-item img {
@@ -105,9 +96,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    height: 200px;
     width: 200px;
 }
 .grid-item:hover {
+    cursor: pointer;
     transform: scale(1.2);
 }
 .div-button:hover {
@@ -118,18 +111,18 @@ body {
     line-height: 1.5rem;
 }
 .grid-item-details-cover {
-    background-color: red;
+    background-color: var(--darkcolor);
     position: absolute;
-    margin-top: 330px;
+    margin-top: 270px;
     z-index: 1;
     width: 100%;
-    height: 100%;
-    background-color: var(--darkcolor);
+    height: 400px;
+    transform-origin: bottom;
     transition: 1s;
 }
-
 .grid-item:hover .grid-item-details-cover {
-    transform: translateY(100%);
+    margin-top: 150px;
+    transform: scaleY(0);
 }
 .grid-image {
     height: 100%;
@@ -137,7 +130,8 @@ body {
 }
 .grid-item p {
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
+    line-height: 1.2rem;
 }
 .show { 
     /* Animation */
